@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/appointment.css" rel="stylesheet">
+    <title>Appointment</title>
+</head>
+<body>
+<form class="form-appointment">
+    <h1 class="h1 mb-3 font-weight-normal">Appointment</h1>
+    <br><br>
+    <div class="form-group">
+    <label for="dog_appointment_email">Email address</label>
+    <input readonly class="form-control-plaintext" type="email"  id="dog_appointment_email" placeholder="tese@test.com">
+    </div>
+    <div class="form-group">
+        <label for="dog_variety">Dog variety</label>
+        <select class="form-control" id="dog_variety">
+            <option>test</option>
+            <option>mc</option>
+            <option>zc</option>
+            <option>px</option>
+            <!--<option>5</option>-->
+        </select>
+    </div>
+    <label for="dog_appointment_date">Appointment date</label>
+    <input type="email" class="form-control" id="dog_appointment_date" placeholder="">
+    <small id="appointment_date_help" class="form-text text-muted">Please input appointment date as this format: dd-mm-yyyy.</small>
+    </div>
+    <div class="form-group">
+        <label for="dog_appointment_time">Appointment time</label>
+        <select class="form-control" id="dog_appointment_time">
+            <option>10am-11.30am</option>
+            <option>11.45am-1.15pm</option>
+            <option>1.30pm-3.00pm</option>
+            <option>3.15pm-4.45pm</option>
+            <!--<option>5</option>-->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="dog_appointment_options">Grooming options</label>
+        <select class="form-control" id="dog_appointment_options">
+            <option>wash only</option>
+            <option>wash and nail clipping</option>
+            <option>deluxe grooming</option>
+            <!--<option>3.15pm-4.45pm</option>-->
+            <!--<option>5</option>-->
+        </select>
+    </div>
+    <!--<div class="form-group">-->
+        <!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+        <!--<select multiple class="form-control" id="exampleFormControlSelect2">-->
+            <!--<option>1</option>-->
+            <!--<option>2</option>-->
+            <!--<option>3</option>-->
+            <!--<option>4</option>-->
+            <!--<option>5</option>-->
+        <!--</select>-->
+    <!--</div>-->
+    <div class="form-group">
+        <label for="dog_appointment_descriptions">Description</label>
+        <textarea class="form-control" id="dog_appointment_descriptions" rows="2"></textarea>
+    </div>
+</form>
+</body>
+</html>
