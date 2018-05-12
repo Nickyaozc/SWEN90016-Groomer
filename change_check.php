@@ -7,16 +7,13 @@ $sclass = $_POST ['sclass'];
 $hobby = "";
 for($i = 0; $i < count($_POST['interest']); $i++){
 	$interest[$i] = $_POST['interest'][$i];
-} 
-//将爱好合为一个串
+}
 foreach($interest as $value) {
 	$hobby = $hobby.$value.".";
 }
-//判断密码
 if ($password != $password2) {
-	//echo "两次密码输入不同！";
 	echo "<script type='text/JavaScript'>
-    	 alert('两次密码输入不同！');
+    	 alert('please input same password twice');
 		</script>";
 	$url = "change_info.php";
 	echo "<script language=\"javascript\">";
@@ -24,11 +21,9 @@ if ($password != $password2) {
 	echo "</script>";
 	exit ();
 }
-//判断分数是否有效
 else if($sscore<0 || $sscore>100){
-	//echo "请输入有效的分数(0-100)！";
 	echo "<script type='text/JavaScript'>
-    	 alert('请输入有效的分数(0-100)！');
+    	 alert('锟斤拷锟斤拷锟斤拷锟斤拷效锟侥凤拷锟斤拷(0-100)锟斤拷');
 		</script>";
 	$url = "change_info.php";
 	echo "<script language=\"javascript\">";
@@ -36,11 +31,9 @@ else if($sscore<0 || $sscore>100){
 	echo "</script>";
 	exit ();
 }
-//判断信息是否完整
 else if (! $sid || ! $sscore || ! $password || ! $sclass ) {
-	//echo "请完整输入信息！";
 	echo "<script type='text/JavaScript'>
-    	 alert('请完整输入信息！');
+    	 alert('');
 		</script>";
 	$url = "change_info.php";
 	echo "<script language=\"javascript\">";
@@ -50,9 +43,8 @@ else if (! $sid || ! $sscore || ! $password || ! $sclass ) {
 }
 $db = new mysqli ( "localhost", "root", "root", "student" );
 if (mysqli_connect_errno ()) {
-	//echo "数据库连接错误！";
 	echo "<script type='text/JavaScript'>
-    	 alert('数据库连接错误！');
+    	 alert('');
 		</script>";
 	$url = "change_info.php";
 	echo "<script language=\"javascript\">";
@@ -65,16 +57,16 @@ $query = "update sinfo set sscore='" . $sscore . "',password='" . $password . "'
 $result = $db->query ( $query );
 if ($result) {
 	echo "<script type='text/JavaScript'>
-    	 alert('修改成功！将跳转到登陆界面。');
+    	 alert('');
 		</script>";
 	$url = "login.html";
 	echo "<script language=\"javascript\">";
 	echo "location.href=\"$url\"";
 	echo "</script>";
-	
+
 } else {
 	echo "<script type='text/JavaScript'>
-    	 alert('修改失败！返回主页');
+    	 alert('');
 		</script>";
 	$url="http://localhost/student/login.html";
 	echo "<script language=\"javascript\">";

@@ -8,7 +8,7 @@ $sid = $_GET ["sid"];
 $db = new mysqli ( "localhost", "root", "root", "student" );
 $db->query("set names utf8");
 if (mysqli_connect_errno ()) {
-	echo "�������ݿ�ʧ��";
+	echo "";
 }
 
 //$mysql->query ( "delete from sinfo where sid = '" . $sid . "';" );
@@ -17,13 +17,13 @@ $result = $db->query ( $query );
 if ($result) {
 	?>
 <script language="javascript">
-alert("ɾ���ɹ�");
+alert("");
 </script>
 <?php
 } else {
 	?>
 <script language="javascript">
-alert("ɾ��ʧ��");
+alert("");
 </script>}
 <?php
 }
