@@ -1,144 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Register</title>
-    <meta name="author" content="Baroom_Five" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <meta name="author" content="Baroom_Five"/>
 </head>
 <body>
-    <!--<center>-->
-    <h1 align="center">Register</h1>
-    <!-- <form name="form" onsubmit="CheckPwd()" action="register.php" -->
-    <form name="form" action="register.php"
-          method="post">
-        <table width="400" height="200" border="1" align="center">
-            <tr>
-                <th colspan="2">User info</th>
-            </tr>
-            <!-- <tr>
-                <td align="center">User ID </td>
-                <td align="center">
-                <input type="text" name="sid">
-                </td>
-            </tr> -->
-            <tr>
-                <td align="center">Username </td>
-                <td align="center">
-                    <input type="text" name="name">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">E-mail address </td>
-                <td align="center">
-                    <input type="text" name="e_mail">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Password </td>
-                <td align="center">
-                    <input type="password" name="password1">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Input again: </td>
-                <td align="center">
-                    <input type="password" name="password2">
-                </td>
-            </tr>
-            <!-- <tr>
-                <td align="center"> 学生班级: </td>
-                <td align="center">
-                <select name="sclass">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                </select>
-            </tr> -->
-            <tr>
-                <td align="center">Address: </td>
-                <td align="center">
-                    <input type="text" name="address">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">State: </td>
-                <td align="center">
-                    <input type="text" name="state">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Postcode: </td>
-                <td align="center">
-                    <input type="text" name="postcode">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Mobile number: </td>
-                <td align="center">
-                    <input type="text" name="mobile_number">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Home number: </td>
-                <td align="center">
-                    <input type="text" name="home_number">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Work number: </td>
-                <td align="center">
-                    <input type="text" name="work_number">
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2">Dog info</th>
-            </tr>
-            <tr>
-                <td align="center">Name: </td>
-                <td align="center">
-                    <input type="text" name="dog_name">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Breed: </td>
-                <td align="center">
-                    <input type="text" name="breed">
-                </td>
-            </tr>
-            <tr>
-                <td align="center">Date of birth: </td>
-                <td align="center">
-                    <input type="text" name="date_of_birth">
-                </td>
-            </tr>
-            <!-- <tr>
-                </td>
-                <td align="center"> Gender: </td>
-                <td align="center"> Male
-                <input type="radio" name="sex" value="Male" checked="checked">
-                Female
-                <input type="radio" name="sex" value="Female">
-                </td>
-            </tr> -->
-            <!-- <tr>
-                <td align="right" colspan="2"> Prefer dog va：
-                <input type='checkbox' name='interest[]' value='JAVA' checked="checked">
-                JAVA
-                <input type='checkbox' name='interest[]' value='C++'>
-                C++
-                <input type='checkbox' name='interest[]' value='PHP'>
-                PHP
-                <input type='checkbox' name='interest[]' value='other'>
-                其他 </td>
-            </tr> -->
-            <tr>
-                <td align="right" colspan="2">
-                    <input type="submit" value="Submit" />
-                    <input type="reset" value="Reset" />
-                </td>
-            </tr>
-        </table>
-    </form>
+<!--<center>-->
+<h1 align="center">Register</h1>
+<br>
+<!-- <form name="form" onsubmit="CheckPwd()" action="register.php" -->
+<form name="form" action="register.php" method="post" class="form-register">
+    <table align="center" class="table table-striped">
+        <tr>
+            <th colspan="4">User info</th>
+        </tr>
+        <tr>
+            <td align="center">Username</td>
+            <td align="center">
+                <input type="text" name="name">
+            </td>
+            <td align="center">E-mail address</td>
+            <td align="center">
+                <input type="text" name="e_mail">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Password</td>
+            <td align="center">
+                <input type="password" name="password1">
+            </td>
+            <td align="center">Input again:</td>
+            <td align="center">
+                <input type="password" name="password2">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Address:</td>
+            <td align="center">
+                <input type="text" name="address">
+            </td>
+            <td align="center">State:</td>
+            <td align="center">
+                <input type="text" name="state">
+            </td>
+        </tr>
+        <!--<tr>-->
+            <!---->
+        <!--</tr>-->
+        <tr>
+            <td align="center">Postcode:</td>
+            <td align="center">
+                <input type="text" name="postcode">
+            </td>
+            <td align="center">Mobile number:</td>
+            <td align="center">
+                <input type="text" name="mobile_number">
+            </td>
+        </tr>
+        <!--<tr>-->
+
+        <!--</tr>-->
+        <tr>
+            <td align="center">Home number:</td>
+            <td align="center">
+                <input type="text" name="home_number">
+            </td>
+            <td align="center">Work number:</td>
+            <td align="center">
+                <input type="text" name="work_number">
+            </td>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <th colspan="4">Dog info</th>
+        </tr>
+        <tr>
+            <td align="center">Name:</td>
+            <td align="center">
+                <input type="text" name="dog_name">
+            </td>
+            <td align="center">Breed:</td>
+            <td align="center">
+                <input type="text" name="breed">
+            </td>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <td align="center">Date of birth:</td>
+            <td align="center">
+                <input type="text" name="date_of_birth">
+            </td>
+            <td align="right" colspan="2">
+                <input type="submit" value="Submit" class="btn btn-secondary btn-sm"/>
+                <input type="reset" value="Reset" class="btn btn-secondary btn-sm"/>
+            </td>
+        </tr>
+        
+    </table>
+</form>
 <!--</center>-->
 </body>
 </html>
