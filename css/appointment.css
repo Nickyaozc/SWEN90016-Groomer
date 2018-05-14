@@ -13,8 +13,14 @@ body {
     background-color: #ffffff;
 }
 .form-appointment {
+     width: 100%;
+     max-width: 800px;
+     padding: 15px;
+     margin: auto;
+ }
+.right-form-appointment {
     width: 100%;
     max-width: 800px;
-    padding: 15px;
-    margin: auto;
+    /*padding: 15px;*/
+    margin-left: 650px;
 }

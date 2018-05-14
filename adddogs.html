@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Add dogs</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/adddogs.css" rel="stylesheet">
+    <meta name="author" content="Baroom_Five"/>
+</head>
+<body>
+<!--<center>-->
+<!--<h1 align="center">Add dogs</h1>-->
+<br>
+<!-- <form name="form" onsubmit="CheckPwd()" action="register.php" -->
+<form name="form" action="adddogs.php" method="post" class="form-register">
+    <table align="center" class="table">
+        <h1 class="h1 mb-3 font-weight-normal">Owner info</h1>
+        <br>
+        <div class="form-group">
+            <label for="index_email">Email address</label>
+            <input readonly class="form-control-plaintext" type="email"  id="index_email" placeholder="tese@test.com">
+        </div>
+        <div class="form-group">
+            <label for="index_username">Username</label>
+            <input readonly class="form-control-plaintext" type="email"  id="index_username" placeholder="testuser">
+        </div>
+        <br>
+        <h1 class="h1 mb-3 font-weight-normal">Dog info</h1>
+        <!--<tr>-->
+            <!--<th colspan="4">Dog info</th>-->
+        </tr>
+        <tr>
+            <td align="center">Name:</td>
+            <td align="center">
+                <input type="text" name="dog_name">
+            </td>
+            <td align="center">Breed:</td>
+            <td align="center">
+                <input type="text" name="breed">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Date of birth:</td>
+            <td align="center">
+                <input type="text" name="date_of_birth">
+            </td>
+            <td align="right" colspan="2">
+                <input type="submit" value="Submit" class="btn btn-secondary btn-sm"/>
+                <input type="reset" value="Reset" class="btn btn-secondary btn-sm"/>
+            </td>
+        </tr>
+
+    </table>
+</form>
+<!--</center>-->
+</body>
+</html>
