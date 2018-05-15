@@ -1,46 +1,31 @@
 <?php
-$name = $_POST['name'];
-$password = $_POST['password'];
-if((!isset($name)) || (!isset($password)))
-{
-}
-else
-{
-	$mysql = mysqli_connect ("localhost","root","root");
-	if(!$mysql)
-	{
-		echo "Unable to connect to database";
-		exit;
-	}
-	$selected = mysqli_select_db($mysql,"student");
-	if(!$selected)
-	{
-		echo "No user in database";
-		exit;
-	}
-	$query = "select count(*) from admin where name = '".$name."' and password = '".$password."'";
-	$result = mysqli_query($mysql,$query);
-	if(!$result)
-	{
-		echo "Inccorect password";
-		exit;
-	}
-	$row = mysqli_fetch_row($result);
-	$count = $row[0];
-	if($count > 0)
-	{
-		$url = "admin_manage.php";
-		echo "<script type='text/javascript'>"."location.href='".$url."'"."</script>";
-	}
-	else
-	{
+$email = $_POST ['email'];
+$password = $_POST ['password'];
+if ((! isset ( $email )) || (! isset ( $password ))) {
+} else {
+	require_once"connect.php";
+	$query = "select * from admin where username = '" . $email ."'";
+	$result = $db->query ( $query );
+	if (! $result) {
 		echo "<script type='text/JavaScript'>
-    	 alert('Successful logging in!');
+    	 alert('Wrong username or password');
 		</script>";
 		$url = "login.html";
 		echo "<script language=\"javascript\">";
 		echo "location.href=\"$url\"";
 		echo "</script>";
+		exit ();
+	}
+	$re = mysqli_fetch_array ( $result );
+	if ($re['password']==$password) {
+		// session_register("name");
+		// session_register("pwd");
+		// $_SESSION['name']=$logname;
+		// $_SESSION['userid']=$re['userid'];
+		echo"<meta http-equiv='refresh' content='0; url=index.html' />";
+	} else {
+		echo "Wrong username or password";
+		echo"<meta http-equiv='refresh' content='3; url=login.html' />";
 	}
 }
 

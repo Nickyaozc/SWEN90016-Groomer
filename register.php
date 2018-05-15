@@ -1,31 +1,14 @@
 <?php
 $name = $_POST ['name'];
-$e_mail = $_POST ['e_mail'];
+$email = $_POST ['e_mail'];
 $password = $_POST ['password1'];
 $password2 = $_POST ['password2'];
 $address = $_POST ['address'];
 $state = $_POST ['state'];
 $postcode = $_POST ['postcode'];
-$mobile_number = $_POST ['mobile_number'];
+$mobile = $_POST ['mobile_number'];
 $home_number = $_POST ['home_number'];
 $work_number= $_POST ['work_number'];
-$dog_name= $_POST ['dog_name'];
-$breed = $_POST ['breed'];
-$date_of_birth = $_POST ['date_of_birth'];
-
-
-
-
-$hobby = "";
-for($i = 0; $i < count($_POST['interest']); $i++){
-	//echo $_POST['interest'][$i];
-	$interest[$i] = $_POST['interest'][$i];
-}
-
-// foreach($interest as $value) {
-// 	$hobby = $hobby.$value.".";
-// }
-// //echo $sid." ".$sname." ".$sscore." ".$password." ".$password2." ".$sclass." ".$sex;
 
 if ($password != $password2) {
 
@@ -39,7 +22,7 @@ if ($password != $password2) {
 	exit ();
 }
 
-else if (! $sid || ! $sname || ! $sscore || ! $password || ! $sclass || ! $sex) {
+else if (! $name || ! $email || ! $password || ! $state || ! $postcode) {
 	echo "<script type='text/JavaScript'>
     	 alert('All the filed are required!');
 		</script>";
@@ -49,22 +32,13 @@ else if (! $sid || ! $sname || ! $sscore || ! $password || ! $sclass || ! $sex) 
 	echo "</script>";
 	exit ();
 }
-$db = new mysqli ( "localhost", "root", "root", "student" );
-$db->query("set names utf8");
-if (mysqli_connect_errno ()) {
-	echo "<script type='text/JavaScript'>
-    	 alert('Unable to connect to database');
-		</script>";
-	$url = "register.html";
-	echo "<script language=\"javascript\">";
-	echo "location.href=\"$url\"";
-	echo "</script>";
-	exit ();
-}
-//$query = "insert into sinfo values('" . $sid . "','" . $sname . "','" . $sscore . "','" . $password . "','" . $sclass . "','" . $sex . "');";
-$query = "insert into sinfo values('" . $sid . "','" . $sname . "','" . $sscore . "','" . $password . "','" . $sclass . "','" . $sex . "','" . $hobby . "');";
+require_once"connect.php";
+$query = "insert into uinfo set u_name='".$name."',u_password='".$password."',u_email='".$email."',u_address='".$address."',u_state='".$state."',u_mobile='".$mobile."',u_homenumber='".$home_number."',u_worknumber='".$work_number."',u_postcode='".$postcode."'";
+
 $result = $db->query ( $query );
+
 if ($result) {
+	
 	echo "<script type='text/JavaScript'>
     	 alert('Successfully registed');
 		</script>";
@@ -85,7 +59,7 @@ if ($result) {
 }
 $db->close ();
 
-$url="http://localhost/student/login.html";
+$url="login.html";
 //echo "<script language=\"javascript\">";
 //echo "location.href=\"$url\"";
 //echo "</script>";

@@ -1,101 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Log in</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-grid.css" rel="stylesheet">
     <link href="css/bootstrap-reboot.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <title>Index page</title>
+    <link href="css/login.css" rel="stylesheet">
+    <script language="javascript">
+        function tosubmit0() {
+            document.form.action = "register.html";
+            documenr.form.submit();
+        }
+
+        function tosubmit1() {
+            document.form.action = "user_login.php";
+            documenr.form.submit();
+        }
+
+        function tosubmit2() {
+            document.form.action = "admin_login.php";
+            document.form.submit();
+        }
+    </script>
 </head>
-<body>
-<form class="form-index">
-    <h1 class="h1 mb-3 font-weight-normal">User info</h1>
-    <br>
-    <div class="form-group">
-        <label for="index_email">Email address</label>
-        <input readonly class="form-control-plaintext" type="email" id="index_email" placeholder="tese@test.com">
-    </div>
-    <div class="form-group">
-        <label for="index_username">Username</label>
-        <input readonly class="form-control-plaintext" type="email" id="index_username" placeholder="testuser">
-    </div>
-    <br>
-    <div>
-        <div class="form-inline">
-            <h1 class="h1 mb-3 font-weight-normal">Dog info</h1>
-            <div style="width:550px"></div>
-            <a href="#" class="badge badge-light">Add dogs</a>
-        </div>
-    </div>
-    <!--<h1 class="h1 mb-3 font-weight-normal">Dog info</h1>-->
+<body class="text-center">
 
-    <br>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Breed</th>
-            <th scope="col">Date of birth</th>
-            <th scope="col" colspan="2">Operations</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>test_dog1</td>
-            <td>test_breed1</td>
-            <td>01-05-18</td>
-            <td><a href="#">appointment</a></td>
-            <td><a href="#">delete</a></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>test_dog2</td>
-            <td>test_breed2</td>
-            <td>01-05-18</td>
-            <td><a href="#">appointment</a></td>
-            <td><a href="#">delete</a></td>
-        </tr>
-        </tbody>
-
-    </table>
-    <br>
-    <h1 class="h1 mb-3 font-weight-normal">My appointment</h1>
-    <br>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Dog name</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time</th>
-            <th scope="col" colspan="2">Operations</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>test_dog1</td>
-            <!--<td>test_breed1</td>-->
-            <td>01-05-18</td>
-            <td>1.30pm-3.00pm</td>
-            <td><a href="#">reschedule</a></td>
-            <td><a href="#">cancel</a></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>test_dog2</td>
-            <!--<td>test_breed2</td>-->
-            <td>03-05-18</td>
-            <td>10am-11.30am</td>
-            <td><a href="#">reschedule</a></td>
-            <td><a href="#">cancel</a></td>
-        </tr>
-        </tbody>
-    </table>
+<form name="form" method="post" class="form-signin">
+    <h1 class="h1 mb-3 font-weight-normal">Login</h1>
     <br><br>
+    <table width="400" height="200" border="0" align="center">
+        <input type="text" name="email" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <br>
+        <input class="btn btn-outline-primary" type="submit" value="Register" onclick="tosubmit0()"/>
+        <input class="btn btn-outline-primary" type="submit" value="User login" onclick="tosubmit1()"/>
+        <input class="btn btn-outline-primary" type="submit" value="Admin login" onclick="tosubmit2()"/>
+        <p class="mt-5 mb-3 text-muted">Baroom Five&copy; 2018</p>
+    </table>
 </form>
 </body>
 </html>
+
+
+
