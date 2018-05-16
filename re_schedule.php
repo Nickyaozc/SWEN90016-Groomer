@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -15,6 +18,22 @@
     
     <?php
         require_once "connect.php";
+        $query_d = "select * from dinfo where d_ownerid='".$_SESSION['id']."'";
+        $results_d = $db->query($query_d);
+        echo "
+            <div class='form-group'>
+                <label for='dog_variety'>Dog name</label>
+                <select class='form-control' name='dogname'>
+        ";
+        while($re_d = mysqli_fetch_array ( $results_d )){
+            echo "<option>".$re_d['d_name']."</option>";                    
+        }            
+                
+        echo "
+                </select>
+            </div>
+        ";
+        
         $query = "select * from appointment where Id='".$_GET['apmt_id']."'";
         $results = $db->query($query);
         $re = mysqli_fetch_array ( $results );

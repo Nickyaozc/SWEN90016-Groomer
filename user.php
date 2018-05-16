@@ -87,7 +87,7 @@
         <div class="form-inline">
             <h1 class="h1 mb-3 font-weight-normal">Appointment</h1>
             <div style="width:380px"></div>
-            <a href="appointment.html" class="badge badge-light">Make a new appointment</a>
+            <a href="appointment.php" class="badge badge-light">Make a new appointment</a>
         </div>
     
     <table class="table table-striped">
@@ -105,10 +105,13 @@
             $query = "select * from appointment where a_userid='".$_SESSION['id']."'";
             $results = $db->query($query);
             while($re = mysqli_fetch_array ( $results )){
-                echo "
+                $query_d = "select d_name from dinfo where Id='".$re['a_dogid']."'";
+                $results_d = $db->query ( $query_d );
+                $re_d = mysqli_fetch_array ( $results_d );
+                echo "        
                     <tr>
-                        <th scope='row'>".$re['Id']."</th>
-                        <td>".$re['a_userid']."</td>
+                        <td>".$re['Id']."</td>
+                        <th scope='row'>".$re_d['d_name']."</th>
                         <td>".$re['a_date']."</td>
                         <td>".$re['a_time']."</td>
                         <td><a href='re_schedule.php?apmt_id=".$re['Id']."'>re-schedule</a></td>

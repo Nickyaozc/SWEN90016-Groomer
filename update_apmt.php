@@ -7,8 +7,9 @@ $options = $_POST ['options'];
 $description = $_POST ['description'];
 $userid = $_SESSION['id'];
 $apmt_id = $_POST['apmt_id'];
+$dogname = $_POST['dogname'];
 
-if (! $variety || ! $date || !$time || !$options) {
+if (! $variety || ! $date || !$time || !$options || !$dogname) {
 	
 	echo "<script type='text/JavaScript'>
     	 alert('All the field are required!');
@@ -20,7 +21,12 @@ if (! $variety || ! $date || !$time || !$options) {
 	exit ();
 }
 require_once"connect.php";
-$query = "update appointment set a_variety='".$variety."', a_date='".$date."',a_time='".$time."', a_userid='".$userid."',a_options='".$options."', a_description='".$description."' where Id='".$apmt_id."'";
+$query_d = "select Id from dinfo where d_ownerid='".$_SESSION['id']."' and d_name='".$dogname."'";
+$results_d = $db->query ( $query_d );
+$re_d = mysqli_fetch_array ( $results_d );
+$dogid = $re_d['Id'];
+
+$query = "update appointment set a_variety='".$variety."', a_date='".$date."',a_time='".$time."', a_userid='".$userid."',a_options='".$options."', a_description='".$description."', a_dogid='".$dogid."' where Id='".$apmt_id."'";
 
 $result = $db->query ( $query );
 

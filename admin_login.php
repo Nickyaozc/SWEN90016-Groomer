@@ -22,7 +22,7 @@ if ((! isset ( $email )) || (! isset ( $password ))) {
 		// session_register("pwd");
 		// $_SESSION['name']=$logname;
 		// $_SESSION['userid']=$re['userid'];
-		echo"<meta http-equiv='refresh' content='0; url=index.html' />";
+		echo"<meta http-equiv='refresh' content='0; url=groomer.php' />";
 	} else {
 		echo "Wrong username or password";
 		echo"<meta http-equiv='refresh' content='3; url=login.html' />";
