@@ -9,6 +9,7 @@
     <title>Groomer page</title>
 </head>
 <body>
+
 <form class="form-index">
     <h1 class="h1 mb-3 font-weight-normal">Appointment list</h1>
     <br>
@@ -56,6 +57,54 @@
                 $re_d = mysqli_fetch_array ( $results_dinfo ); 
                 echo "
                     <td>".$re_d['d_name']."</td>
+                    </tr>
+                ";
+                
+            }
+            
+        ?>
+        </tbody>
+    </table>
+    <br><br>
+</form>
+
+<form class="form-index">
+    <h1 class="h1 mb-3 font-weight-normal">User list</h1>
+    <br>
+    
+    <br>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">User id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Home</th>
+            <th scope="col">Work</th>
+            <th scope="col">Address</th>
+            <th scope="col">Operations</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+            require_once "connect.php";
+            $query2 = "select * from uinfo ";
+            $results2 = $db->query($query2);
+            
+            
+            while($re2 = mysqli_fetch_array ( $results2 )){
+                echo "
+                    <tr>
+                    <th scope='row'>".$re2['Id']."</th>
+                    <td>".$re2['u_name']."</td>
+                    <td>".$re2['u_email']."</td>
+                    <td>".$re2['u_mobile']."</td>
+                    <td>".$re2['u_homenumber']."</td>
+                    <td>".$re2['u_worknumber']."</td>
+                    <td>".$re2['u_address']."</td>
+                    <td><a href='delete_user.php?user_id=".$re2['Id']."'>delete</a></td>
                     </tr>
                 ";
                 

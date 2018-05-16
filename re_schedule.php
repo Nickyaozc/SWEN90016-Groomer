@@ -22,7 +22,7 @@
         $results_d = $db->query($query_d);
         echo "
             <div class='form-group'>
-                <label for='dog_variety'>Dog name</label>
+                <label for='dog_name'>Dog name</label>
                 <select class='form-control' name='dogname'>
         ";
         while($re_d = mysqli_fetch_array ( $results_d )){
@@ -40,8 +40,8 @@
         echo "
             <input type='hidden' name='apmt_id' value='".$_GET['apmt_id']."'>
             <div class='form-group'>
-                <label for='dog_variety'>Dog variety</label>
-                <select class='form-control' name='variety' >
+                <label for='dog_breed'>Breed</label>
+                <select class='form-control' name='breed' >
                     <option>test</option>
                     <option>mc</option>
                     <option>zc</option>

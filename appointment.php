@@ -34,8 +34,8 @@
         ";
     ?>
     <div class='form-group'>
-        <label for='dog_variety'>Dog variety</label>
-        <select class='form-control' name='variety'>
+        <label for='dog_breed'>Breed</label>
+        <select class='form-control' name='breed'>
             <option>test</option>
             <option>mc</option>
             <option>zc</option>

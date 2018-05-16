@@ -24,7 +24,7 @@ if ($password != $password2) {
 
 else if (! $name || ! $email || ! $password || ! $state || ! $postcode) {
 	echo "<script type='text/JavaScript'>
-    	 alert('All the filed are required!');
+    	 alert('All the fields are required!');
 		</script>";
 	$url = "register.html";
 	echo "<script language=\"javascript\">";
@@ -59,7 +59,7 @@ if ($result) {
 }
 $db->close ();
 
-$url="login.html";
+$url="index.html";
 //echo "<script language=\"javascript\">";
 //echo "location.href=\"$url\"";
 //echo "</script>";
