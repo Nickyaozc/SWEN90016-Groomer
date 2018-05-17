@@ -8,15 +8,36 @@
     <link href="css/groomer.css" rel="stylesheet">
     <title>Groomer page</title>
 </head>
-<body>
+<body background="img/Yakkety_Yak_Wallpaper_grey.jpg" style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-brand" href="#">Groomer</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Management<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Log out</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</nav>
+<br>
 <form class="form-index">
     <h1 class="h1 mb-3 font-weight-normal">Appointment list</h1>
     <br>
     
     <br>
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-hover">
+        <thead class="thead-dark">
         <tr>
             <th scope="col">Appointment id</th>
             <th scope="col">Date</th>
@@ -73,8 +94,8 @@
     <br>
     
     <br>
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-hover">
+        <thead class="thead-dark">
         <tr>
             <th scope="col">User id</th>
             <th scope="col">User Name</th>

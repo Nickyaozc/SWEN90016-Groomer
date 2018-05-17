@@ -11,7 +11,29 @@
     <link href="css/index.css" rel="stylesheet">
     <title>Index page</title>
 </head>
-<body>
+<body background="img/Yakkety_Yak_Wallpaper_grey.jpg" style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-brand" href="#">Groomer</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Log out</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</nav>
+<br>
 <form class="form-index">
     <div class="form-inline">
             <h1 class="h1 mb-3 font-weight-normal">User info</h1>
@@ -53,8 +75,8 @@
     <!--<h1 class="h1 mb-3 font-weight-normal">Dog info</h1>-->
 
     <br>
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-hover">
+        <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
@@ -89,9 +111,9 @@
             <div style="width:380px"></div>
             <a href="appointment.php" class="badge badge-light">Make a new appointment</a>
         </div>
-    
-    <table class="table table-striped">
-        <thead>
+
+    <table class="table table-hover">
+        <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Dog name</th>

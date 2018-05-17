@@ -4,17 +4,17 @@ body {
 }
 
 body {
-    /*display: -ms-flexbox;*/
-    /*display: flex;*/
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 40px;
     padding-bottom: 40px;
     background-color: #ffffff;
+    /*color: #ffffff;*/
 }
 .form-index {
     width: 100%;
     max-width: 800px;
     padding: 15px;
     margin: auto;
+    /*background: rgba(96, 96, 96, 0.9);*/
+    /*opacity:0.8;*/
 }

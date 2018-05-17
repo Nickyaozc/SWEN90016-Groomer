@@ -12,7 +12,7 @@
     <link href="css/adddogs.css" rel="stylesheet">
     <meta name="author" content="Baroom_Five"/>
 </head>
-<body>
+<body background="img/Yakkety_Yak_Wallpaper_grey.jpg" style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
 <!--<center>-->
 <!--<h1 align="center">Add dogs</h1>-->
 <br>
