@@ -42,10 +42,18 @@
             <div class='form-group'>
                 <label for='dog_breed'>Breed</label>
                 <select class='form-control' name='breed' >
-                    <option>test</option>
-                    <option>mc</option>
-                    <option>zc</option>
-                    <option>px</option>
+                    <option>German Shepherd</option>
+                    <option>Labrador Retriever</option>
+                    <option>Rottweiler</option>
+                    <option>Golden Retriever</option>
+                    <option>Beagle</option>
+                    <option>Bulldog</option>
+                    <option>Great Dane</option>
+                    <option>Poodle</option>
+                    <option>Dobermann</option>
+                    <option>Dachshund</option>
+                    <option>Siberian Husky</option>
+                    <option>Others</option>
                     <!--<option>5</option>-->
                 </select>
             </div>
