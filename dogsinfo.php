@@ -99,7 +99,22 @@
         <tr>
             <th scope='row'>#</th>
             <td> <input type="text" name="dog_name"></td>
-            <td><input type="text" name="breed"></td>
+            <td><select class='form-control' name='breed'>
+                        <!--            <option>test</option>-->
+                        <option>German Shepherd</option>
+                        <option>Labrador Retriever</option>
+                        <option>Rottweiler</option>
+                        <option>Golden Retriever</option>
+                        <option>Beagle</option>
+                        <option>Bulldog</option>
+                        <option>Great Dane</option>
+                        <option>Poodle</option>
+                        <option>Dobermann</option>
+                        <option>Dachshund</option>
+                        <option>Siberian Husky</option>
+                        <option>Others</option>
+                        <!--<option>5</option>-->
+                    </select></td>
             <td><input type="text" name="date_of_birth"></td>
             <td><a href="adddogs.php"><input type="submit" value="Submit" class="btn btn-secondary btn-sm"/></a></td>
             <td><input type="reset" value="Reset" class="btn btn-secondary btn-sm"/></td>
