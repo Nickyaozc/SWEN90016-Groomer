@@ -99,7 +99,7 @@
         <tr>
             <th scope='row'>#</th>
             <td> <input type="text" name="dog_name"></td>
-            <td><select class='form-control' name='breed'>
+            <td ><select name='breed'>
                         <!--            <option>test</option>-->
                         <option>German Shepherd</option>
                         <option>Labrador Retriever</option>
