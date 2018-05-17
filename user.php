@@ -21,6 +21,11 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
         <form class="form-inline">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <div class="nav-link" href="user.php">.<span class="sr-only">(current)</span></div>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Log out</a>
                 </li>
