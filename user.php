@@ -19,12 +19,12 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <div class="nav-link">Home<span class="sr-only">(current)</span></div>
+            </li>
+        </ul>
         <form class="form-inline">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <div class="nav-link" href="user.php">.<span class="sr-only">(current)</span></div>
-                </li>
-            </ul>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Log out</a>
