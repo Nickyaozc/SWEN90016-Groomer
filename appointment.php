@@ -21,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Appointment<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="user.php">Home<span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <form class="form-inline">

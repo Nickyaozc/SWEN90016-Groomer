@@ -12,7 +12,29 @@
     <link href="css/register.css" rel="stylesheet">
     <meta name="author" content="Baroom_Five"/>
 </head>
-<body>
+<body background="img/Yakkety_Yak_Wallpaper_grey.jpg" style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-brand" href="#">Groomer</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="user.php">Home<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Log out</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</nav>
+<br>
 <!--<center>-->
 <h1 align="center">Edit user info</h1>
 <br>
