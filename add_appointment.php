@@ -57,8 +57,8 @@ if ($results) {
 $db->close ();
 
 $url="appointment.php";
-// echo "<script language=\"javascript\">";
-// echo "location.href=\"$url\"";
-// echo "</script>";
-// echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"3;url=$url\">";
+echo "<script language=\"javascript\">";
+echo "location.href=\"$url\"";
+echo "</script>";
+echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"3;url=$url\">";
 ?>
