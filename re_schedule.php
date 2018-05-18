@@ -13,7 +13,7 @@
 </head>
 <body>
 <form class='form-appointment' action='update_apmt.php' method='post'>
-    <h1 class='h1 mb-3 font-weight-normal'>Appointment</h1>
+    <h1 class='h1 mb-3 font-weight-normal'>Re-Schedule Appointment</h1>
     <br><br>
     
     <?php
