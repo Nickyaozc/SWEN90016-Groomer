@@ -1,6 +1,5 @@
 <?php
 session_start();
-$breed = $_POST ['breed'];
 $date = $_POST ['date'];
 $time = $_POST ['time'];
 $options = $_POST ['options'];
@@ -8,7 +7,7 @@ $description = $_POST ['description'];
 $dogname = $_POST['dogname'];
 $userid = $_SESSION['id'];
 
-if (! $breed || ! $date || !$time || !$options || !$dogname) {
+if (! $date || !$time || !$options || !$dogname) {
 	
 	echo "<script type='text/JavaScript'>
     	 alert('All the field are required!');
@@ -20,10 +19,11 @@ if (! $breed || ! $date || !$time || !$options || !$dogname) {
 	exit ();
 }
 require_once"connect.php";
-$query_d = "select Id from dinfo where d_ownerid='".$_SESSION['id']."' and d_name='".$dogname."'";
+$query_d = "select * from dinfo where d_ownerid='".$_SESSION['id']."' and d_name='".$dogname."'";
 $results_d = $db->query ( $query_d );
 $re_d = mysqli_fetch_array ( $results_d );
 $dogid = $re_d['Id'];
+$breed = $re_d['d_breed'];
 $query = "insert into appointment set a_breed='".$breed."', a_date='".$date."',a_time='".$time."', a_userid='".$userid."',a_options='".$options."', a_description='".$description."', a_dogid='".$dogid."'";
 
 $results = $db->query ( $query );

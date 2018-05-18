@@ -55,25 +55,7 @@
             </div>
         ";
     ?>
-    <div class='form-group'>
-        <label for='dog_breed'>Breed</label>
-        <select class='form-control' name='breed'>
-<!--            <option>test</option>-->
-            <option>German Shepherd</option>
-            <option>Labrador Retriever</option>
-            <option>Rottweiler</option>
-            <option>Golden Retriever</option>
-            <option>Beagle</option>
-            <option>Bulldog</option>
-            <option>Great Dane</option>
-            <option>Poodle</option>
-            <option>Dobermann</option>
-            <option>Dachshund</option>
-            <option>Siberian Husky</option>
-            <option>Others</option>
-            <!--<option>5</option>-->
-        </select>
-    </div>
+    
     <label for='dog_appointment_date'>Appointment date</label>
     <input type='text' class='form-control' name='date' >
     <small name='appointment_date_help' class='form-text text-muted'>Please input appointment date as this format:
