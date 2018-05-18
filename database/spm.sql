@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2018 at 05:30 AM
+-- Generation Time: May 18, 2018 at 06:05 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -49,7 +49,7 @@ CREATE TABLE `appointment` (
   `Id` int(10) NOT NULL,
   `a_userid` int(10) NOT NULL DEFAULT '0',
   `a_dogid` int(10) NOT NULL DEFAULT '0',
-  `a_breed` varchar(10) NOT NULL DEFAULT '',
+  `a_breed` varchar(50) NOT NULL DEFAULT '',
   `a_date` varchar(20) NOT NULL DEFAULT '',
   `a_time` varchar(50) NOT NULL DEFAULT '',
   `a_options` varchar(20) NOT NULL DEFAULT '',
@@ -62,7 +62,8 @@ CREATE TABLE `appointment` (
 
 INSERT INTO `appointment` (`Id`, `a_userid`, `a_dogid`, `a_breed`, `a_date`, `a_time`, `a_options`, `a_description`) VALUES
 (29, 5, 6, 'test', '2018-05-16', '10am-11.30am', 'wash only', ''),
-(30, 5, 6, 'test', '2018-05-16', '10am-11.30am', 'wash only', 'qq');
+(30, 5, 6, 'test', '2018-05-16', '10am-11.30am', 'wash only', 'qq'),
+(31, 6, 8, 'German Shepherd', '2018-05-16', '10am-11.30am', 'wash only', 'qqqq');
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,10 @@ CREATE TABLE `dinfo` (
 --
 
 INSERT INTO `dinfo` (`Id`, `d_ownerid`, `d_name`, `d_breed`, `d_date_of_birth`) VALUES
-(6, 5, 'Hulk', 'zc', '2018-01-01');
+(6, 5, 'Hulk', 'zc', '2018-01-01'),
+(7, 5, 'zc', 'German Shepherd', '2018-01-01'),
+(8, 6, 'zc', 'German Shepherd', '2017-01-01'),
+(9, 6, 'mc', 'Labrador Retriever', '2016-01-01');
 
 -- --------------------------------------------------------
 
@@ -98,10 +102,10 @@ CREATE TABLE `uinfo` (
   `u_password` varchar(20) NOT NULL DEFAULT '',
   `u_address` varchar(100) NOT NULL DEFAULT '',
   `u_state` char(3) NOT NULL DEFAULT '',
-  `u_postcode` smallint(4) NOT NULL DEFAULT '0',
-  `u_mobile` int(11) NOT NULL DEFAULT '0',
-  `u_homenumber` int(11) NOT NULL DEFAULT '0',
-  `u_worknumber` int(11) NOT NULL DEFAULT '0'
+  `u_postcode` varchar(10) NOT NULL DEFAULT '0',
+  `u_mobile` varchar(11) NOT NULL DEFAULT '0',
+  `u_homenumber` varchar(11) NOT NULL DEFAULT '0',
+  `u_worknumber` varchar(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -109,7 +113,8 @@ CREATE TABLE `uinfo` (
 --
 
 INSERT INTO `uinfo` (`Id`, `u_name`, `u_email`, `u_password`, `u_address`, `u_state`, `u_postcode`, `u_mobile`, `u_homenumber`, `u_worknumber`) VALUES
-(5, 'Tony Stark', 'tonystark@gmail.com', 'tony', 'New York City', 'NY', 10001, 10001, 10002, 10003);
+(5, 'Tony Stark', 'tonystark@gmail.com', 'tony', 'New York City', 'NY', '10001', '10001', '10002', '10003'),
+(6, 'px', 'px.lin1@gmail.com', 'px', 'unimelb', 'VIC', '3000', '0', '1', '2');
 
 --
 -- Indexes for dumped tables
@@ -155,17 +160,17 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `dinfo`
 --
 ALTER TABLE `dinfo`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `uinfo`
 --
 ALTER TABLE `uinfo`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints for dumped tables
 --

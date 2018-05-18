@@ -36,6 +36,7 @@ $mail->From = "tomgroomer90016@gmail.com";
 $mail->FromName = "Tom The Groomer";
  
 $mail->addAddress("tomgroomer90016@gmail.com","Myself");
+$mail->addAddress($owneremail,$ownername);
 // $mail->addCC("user.3@ymail.com","User 3");
 // $mail->addBCC("user.4@in.com","User 4");
  

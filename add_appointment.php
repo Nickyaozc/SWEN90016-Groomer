@@ -29,10 +29,11 @@ $query = "insert into appointment set a_breed='".$breed."', a_date='".$date."',a
 $results = $db->query ( $query );
 
 if ($results) {
-		$query_u = "select u_name from uinfo where Id='".$_SESSION['id']."'";
+		$query_u = "select * from uinfo where Id='".$_SESSION['id']."'";
 		$results_u = $db->query ( $query_u );
 		$re_u = mysqli_fetch_array ( $results_u );
 		$ownername = $re_u['u_name'];
+		$owneremail = $re_u['u_email'];
 		require_once 'sendemail.php';
 		echo "<script type='text/JavaScript'>
 	    	 alert('Appointment Successfully made');
@@ -56,8 +57,8 @@ if ($results) {
 $db->close ();
 
 $url="appointment.php";
-echo "<script language=\"javascript\">";
-echo "location.href=\"$url\"";
-echo "</script>";
-echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"3;url=$url\">";
+// echo "<script language=\"javascript\">";
+// echo "location.href=\"$url\"";
+// echo "</script>";
+// echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"3;url=$url\">";
 ?>

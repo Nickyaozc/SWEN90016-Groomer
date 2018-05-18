@@ -42,7 +42,7 @@ if ($result) {
 	echo "<script type='text/JavaScript'>
     	 alert('Successfully registed');
 		</script>";
-	$url = "login.html";
+	$url = "index.html";
 	echo "<script language=\"javascript\">";
 	echo "location.href=\"$url\"";
 	echo "</script>";
